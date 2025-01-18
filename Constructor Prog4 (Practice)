@@ -1,0 +1,25 @@
+"""Q2	Create a class Rectangle with attributes length and width. 
+Write methods to calculate and return the area and perimeter. 
+Use the constructor to initialize the attributes.
+"""
+class Rectangle:
+    def __init__(self):
+        self.length = 4.3
+        self.width = 2.1
+
+    def calarea(self):
+        self.area = self.length * self.width
+        return self.area
+
+    def calperi(self):
+        self.peri = 2 * (self.length + self.width)
+        return self.peri
+
+    def displayall(self):
+        self.area = self.length * self.width
+        self.peri = 2 * (self.length + self.width)
+        print("area",self.area)
+        print("Perimeter",self.peri)
+
+Myrectangle = Rectangle()
+Myrectangle.displayall()
