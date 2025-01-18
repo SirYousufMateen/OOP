@@ -1,0 +1,13 @@
+class Car:
+    def __init__(self):
+        self.Model = "Honda"
+        self.year = 2025
+
+    def display(self):
+        print("My car model is", self.Model)
+        print("My car year is", self.year)
+
+Mycar1 = Car()
+Mycar1.display()
+print(Mycar1.Model)
+print(Mycar1.year)
