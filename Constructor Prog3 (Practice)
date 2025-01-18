@@ -1,0 +1,12 @@
+"""Q 1	Create a class Person with the attributes name and age.
+Use the constructor (__init__) to initialize these attributes.
+Create an instance of Person and print the attributes."""
+
+class Person:
+    def __init__(self):
+        self.name = "Mubeen"
+        self.age = 18
+
+Person1 = Person()
+print(Person1.name)
+print(Person1.age)
