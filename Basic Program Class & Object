@@ -1,0 +1,12 @@
+class Student():
+    def SName(self):
+        print("This is the student class")
+    def Sclass(self):
+        print("This is A2 class")
+
+student1 = Student()
+student1.SName()
+student1.Sclass()
+
+student2 = Student()
+student2.SName()
