@@ -1,0 +1,12 @@
+class MyClass:
+    def __init__(self):
+        self.__x = 10
+    def GetX(self):
+        return self.__x
+    def setx(self,x):
+        self.__x = x
+
+Myobj = MyClass()
+print(Myobj.GetX())
+Myobj.setx(12)
+print(Myobj.GetX())
