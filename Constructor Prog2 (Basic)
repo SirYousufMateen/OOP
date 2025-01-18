@@ -1,0 +1,28 @@
+class Car:
+    def __init__(self,m,y):
+        self.Model = m
+        self.year = y
+
+    def display(self):
+        print("My car model is", self.Model)
+        print("My car year is", self.year)
+
+#Object 1
+carmodel = input("Enter your car model")
+caryear = int(input("Enter your car year"))
+Mycar1 = Car(carmodel,caryear)
+Mycar1.display()
+
+#Object 2
+carmodel = input("Enter your car model")
+caryear = int(input("Enter your car year"))
+Mycar2 = Car(carmodel,caryear)
+Mycar2.display()
+
+#Object 3
+carmodel = input("Enter your car model")
+caryear = int(input("Enter your car year"))
+Mycar3 = Car(carmodel,caryear)
+Mycar3.display()
+
+
