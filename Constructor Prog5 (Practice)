@@ -1,0 +1,18 @@
+"""Q 3	Create a class Student with attributes name and grade. 
+Ensure that grade is a value between 0 and 100 in the constructor. 
+Raise a ValueError if an invalid grade is provided.
+"""
+class Student:
+    def __init__(self,Name,Grade):
+        self.Name = Name
+        self.Grade = Grade
+
+userName = input("Enter your name")
+usergrade = int(input("Enter your grade between 0 & 100"))
+while usergrade < 0 or usergrade > 100:
+    print("Invalid Grade")
+    usergrade = int(input("Enter your grade between 0 & 100"))
+
+Student1 = Student(userName,usergrade)
+print(Student1.Name)
+print(Student1.Grade)
