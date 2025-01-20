@@ -1,0 +1,55 @@
+class TreasureChest:
+    def __init__(self,PQuestion,Panswer,Ppoints):
+        # question : STRING
+        # answer : INTEGER
+        # points: INTEGER
+        self.__Question = PQuestion
+        self.__Answer = Panswer
+        self.__Points = Ppoints
+
+    def getQuestion(self):
+        return self.__Question
+
+    def checkAnswer(self,Ans):
+        if int(self.__Answer) == Ans:
+            return True
+        else:
+            return False
+
+    def getPoints(self,No):
+        if No == 1:
+            return int(self.__Points)
+        elif No == 2:
+            return int(self.__Points)//2
+        elif No==3 or No==4:
+            return int(self.__Points)//4
+        else:
+            return 0
+
+
+arrayTreasure = []
+def readData():
+    try:
+        file = open("TreasureChestData", "r")
+        Question = file.readline().strip()
+        print(Question)
+        while Question!="":
+            answer = file.readline().strip()
+            points= file.readline().strip()
+            arrayTreasure.append(TreasureChest(Question,answer,points))
+            Question = file.readline().strip()
+        file.close()
+    except:
+        print("File not found")
+
+readData()
+
+userchoice = int(input("Enter your choice"))
+if userchoice> 0 and userchoice<6:
+    result = False
+    attempts = 0
+    while result == False:
+        answer = int(input(f"{arrayTreasure[userchoice-1].getQuestion()}:"))
+        result = arrayTreasure[userchoice-1].checkAnswer(answer)
+        attempts = attempts + 1
+print(int(arrayTreasure[userchoice-1].getPoints(attempts)))
