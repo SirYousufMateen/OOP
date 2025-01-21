@@ -1,0 +1,34 @@
+class Ballon:
+    def __init__(self,Pcolour,PdefenceITem):
+        self.__Colour = Pcolour
+        self.__DefenceItem = PdefenceITem
+        self.__Health = 100
+
+    def GetDefenceItem(self):
+        return self.__DefenceItem
+
+    def ChangeHealth(self,Health):
+        self.__Health = self.__Health + Health
+
+    def CheckHealth(self):
+        if self.__Health<=0:
+            return True
+        else:
+            return False
+
+userdefence = input("Enter your defence item")
+usercolour = input("Enter your colour")
+Ballon1 = Ballon(usercolour,userdefence)
+
+
+def Defend(Ballon1):
+    strength = int(input("Enter strength"))
+    Ballon1.ChangeHealth(-strength)
+    print(Ballon1.GetDefenceItem())
+    if Ballon1.CheckHealth() == True :
+        print("Defence Failed")
+    else:
+        print("Defence Succeeded")
+    return Ballon1
+
+Ballon1 = Defend(Ballon1)
